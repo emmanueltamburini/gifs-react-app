@@ -1,10 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import GifApp from './GifApp.tsx';
+import ReactDOM  from 'react-dom/client';
+import GifApp from './GifApp';
+import "./styles.css";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <GifApp />
-  </React.StrictMode>,
-)
+const element = document.getElementById('root');
+
+if (element) {
+    ReactDOM.createRoot(element).render(
+        <React.StrictMode>
+            <GifApp />
+        </React.StrictMode>
+    )
+}

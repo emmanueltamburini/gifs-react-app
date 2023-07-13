@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AddCategory from "./Components/AddCategory";
 
 const GifApp = () => {
   const [categories, setCategories] = useState<string[]>(['One Punch', 'Dragon ball']);
@@ -10,6 +11,7 @@ const GifApp = () => {
   return (
     <>
         <h1>GifApp</h1>
+        <AddCategory />
         <button onClick={onAddCategory}>Add</button>
 
         <ol>

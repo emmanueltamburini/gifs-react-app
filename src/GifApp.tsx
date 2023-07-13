@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AddCategory from "./Components/AddCategory";
+import { GridGif } from "./Components/GridGif";
 
 const GifApp = () => {
   const [categories, setCategories] = useState<string[]>(['One Punch', 'Dragon ball']);
@@ -16,10 +17,7 @@ const GifApp = () => {
     <>
         <h1>GifApp</h1>
         <AddCategory onAdd={onAddCategory}/>
-
-        <ol>
-            {categories.map(element => <li key={element}>{element}</li>)}
-        </ol>
+        {categories.map(element => <GridGif key={element} category={element}/>)}
     </>
   )
 }

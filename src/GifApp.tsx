@@ -4,15 +4,18 @@ import AddCategory from "./Components/AddCategory";
 const GifApp = () => {
   const [categories, setCategories] = useState<string[]>(['One Punch', 'Dragon ball']);
 
-  const onAddCategory = () => {
-    setCategories(state => ["Demon Slayer", ...state]);
+  const onAddCategory = (value: string) => {
+    if (value.trim() === '' || categories.includes(value)) {
+        return;
+    }
+
+    setCategories(state => [value, ...state]);
   }
 
   return (
     <>
         <h1>GifApp</h1>
-        <AddCategory />
-        <button onClick={onAddCategory}>Add</button>
+        <AddCategory onAdd={onAddCategory}/>
 
         <ol>
             {categories.map(element => <li key={element}>{element}</li>)}

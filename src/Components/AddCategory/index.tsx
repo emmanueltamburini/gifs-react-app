@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-const AddCategory = () => {
+interface Props {
+  onAdd: (value: string) => void
+}
+
+const AddCategory = ({ onAdd }:Props) => {
   const [inputValue, setInputValue] = useState('');
 
   const onInputChange = ({target}: React.ChangeEvent<HTMLInputElement>) => {
@@ -9,7 +13,8 @@ const AddCategory = () => {
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(inputValue);
+    onAdd(inputValue);
+    setInputValue('');
   }
 
   return (

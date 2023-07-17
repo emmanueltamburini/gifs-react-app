@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { getGif } from "../../helpers/getGif";
 
 interface Props {
@@ -5,7 +6,9 @@ interface Props {
 }
 
 export const GridGif = ({category}:Props) => {
-  getGif(category);
+  useEffect(() => {
+    getGif(category);
+  }, [category]);
 
   return (
     <>

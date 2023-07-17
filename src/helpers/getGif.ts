@@ -12,4 +12,6 @@ export const getGif = async (category: string) => {
     }));
 
     console.log('=== index.tsx [18] ===', gif);
+
+    return gif;
   }

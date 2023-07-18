@@ -4,7 +4,7 @@ interface Props {
   onAdd: (value: string) => void
 }
 
-const AddCategory = ({ onAdd }:Props) => {
+export const AddCategory = ({ onAdd }:Props) => {
   const [inputValue, setInputValue] = useState('');
 
   const onInputChange = ({target}: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,5 +28,3 @@ const AddCategory = ({ onAdd }:Props) => {
     </form>
   )
 }
-
-export default AddCategory;

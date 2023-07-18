@@ -1,6 +1,5 @@
 import { useState } from "react";
-import AddCategory from "./Components/AddCategory";
-import { GridGif } from "./Components/GridGif";
+import { GridGif, AddCategory } from "./Components";
 
 const GifApp = () => {
   const [categories, setCategories] = useState<string[]>(['Dragon ball']);

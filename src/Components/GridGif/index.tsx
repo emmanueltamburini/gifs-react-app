@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { getGif } from "../../helpers/getGif";
 import { Gif } from '../../interfaces/Gif.interfaces';
+import { GridItem } from "./GridItem/GridItem";
 
 interface Props {
     category: string;
@@ -24,15 +25,13 @@ export const GridGif = ({ category }: Props) => {
     return (
         <>
             <h3>{category}</h3>
-            <ol>
-                {images.map(({id, title}) => {
+            <div className="card-grid">
+                {images.map(image => {
                     return (
-                        <li key={id}>
-                            {title}
-                        </li>
+                        <GridItem key={image.id} image={image} />
                     );
                 })}
-            </ol>
+            </div>
         </>
     );
 }

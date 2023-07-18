@@ -1,9 +1,8 @@
-export interface GIFResponse {
-    data:       Datum[];
-    pagination: Pagination;
-    meta:       Meta;
+export interface Gif {
+    id: string,
+    title: string,
+    url:  string
 }
-
 export interface Datum {
     type:                       string;
     id:                         string;

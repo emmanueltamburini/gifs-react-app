@@ -9,9 +9,14 @@ export const useFetchGif = (category: string) => {
 
     const getImages = useCallback(
         async () => {
-            const fetchImages = await getGif(category);
-            setImages(fetchImages);
-            setIsLoading(false);
+            try {
+                const fetchImages = await getGif(category);
+                setImages(fetchImages);
+                setIsLoading(false);
+            } catch (error) {
+                console.error(error);
+                setIsLoading(false);
+            }
         },
         [category],
     )
@@ -20,5 +25,5 @@ export const useFetchGif = (category: string) => {
         getImages();
     }, [getImages]);
 
-  return {images, isLoading};
+    return {images, isLoading};
 }

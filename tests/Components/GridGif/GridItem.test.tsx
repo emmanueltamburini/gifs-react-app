@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
 import { Gif } from "../../../src/interfaces/Gif.interfaces";
 import { GridItem } from '../../../src/Components/GridGif/GridItem/GridItem';
 
@@ -12,5 +12,18 @@ describe('GridItem test', () => {
     test('should be equal to snapshot', () => {
         const {container} = render(<GridItem image={image} />);
         expect(container).toMatchSnapshot();
+    });
+
+    test('should show url and alt of the image', () => {
+        render(<GridItem image={image} />);
+        const {alt, src} = screen.getByRole<HTMLImageElement>('img');
+        expect(src).toBe(image.url);
+        expect(alt).toBe(image.title);
+    });
+
+
+    test('should show title in the component', () => {
+        render(<GridItem image={image} />);
+        expect(screen.getByText(image.title)).toBeTruthy();
     });
 })

@@ -12,6 +12,7 @@
     "test:watch": "jest --watchAll"
   },
   "dependencies": {
+    "@babel/preset-typescript": "^7.22.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

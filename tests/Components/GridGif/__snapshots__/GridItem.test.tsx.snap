@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridItem test should be equal to snapshot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="Ace Of Spades Poker GIF"
+      src="https://media2.giphy.com/media/TS9pTA670S1ajXEiK1/giphy.gif?cid=47a56d216o55wkkv9735xyvrthi3vd3g5rtrzamij06uueeu&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+    />
+    <p>
+      Ace Of Spades Poker GIF
+    </p>
+  </div>
+</div>
+`;

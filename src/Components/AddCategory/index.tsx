@@ -4,7 +4,7 @@ interface Props {
   onAdd: (value: string) => void
 }
 
-export const AddCategory = ({ onAdd }:Props) => {
+export const AddCategory = ({ onAdd }: Props) => {
   const [inputValue, setInputValue] = useState('');
 
   const onInputChange = ({target}: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,7 +18,7 @@ export const AddCategory = ({ onAdd }:Props) => {
   }
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} aria-label="form">
       <input
           type="text"
           placeholder="Search gif"

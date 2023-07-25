@@ -2,6 +2,11 @@ import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react"
 import { AddCategory } from '../../../src/Components/AddCategory/index';
 describe('Test in AddCategory', () => {
+    test('should be equal to snapshot', () => {
+        const {container} = render(<AddCategory onAdd={jest.fn()} />);
+        expect(container).toMatchSnapshot();
+    });
+
     test('should show the value of the textbox', () => {
         render(<AddCategory onAdd={jest.fn()} />);
         const input = screen.getByRole<HTMLInputElement>('textbox');

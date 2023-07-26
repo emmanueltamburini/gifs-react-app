@@ -2,7 +2,7 @@
 
 ## GifApp README
 
-This application is a gif browser that use a third-person-api [giphy](<https://developers.giphy.com/>) to search gif. You can see the final result in the following [link](<https://64b7b6a45c53ff78ea5488bf--thunderous-conkies-2df16a.netlify.app/>)
+This application is a gif browser that use a third-person-api [giphy](<https://developers.giphy.com/>) to search gif. This app also has unit test with jest. You can see the final result in the following [link](<https://64b7b6a45c53ff78ea5488bf--thunderous-conkies-2df16a.netlify.app/>)
 
 ### Getting started
 

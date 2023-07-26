@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests in GridGif should be equal to snapshot 1`] = `
+<div>
+  <h3>
+    test
+  </h3>
+  <div
+    class="card-grid"
+  >
+    <div
+      class="card"
+    >
+      <img
+        alt="test-1"
+        src="https://www.test.com/1"
+      />
+      <p>
+        test-1
+      </p>
+    </div>
+    <div
+      class="card"
+    >
+      <img
+        alt="test-2"
+        src="https://www.test.com/2"
+      />
+      <p>
+        test-2
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -1,4 +1,3 @@
-
 import { useCallback, useEffect, useState } from "react";
 import { getGif } from "../helpers/getGif";
 import { Gif } from "../interfaces/Gif.interfaces";

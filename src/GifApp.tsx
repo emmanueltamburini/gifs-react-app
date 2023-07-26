@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GridGif, AddCategory } from "./Components";
 
 const GifApp = () => {
-  const [categories, setCategories] = useState<string[]>(['Dragon ball']);
+  const [categories, setCategories] = useState<string[]>([]);
 
   const onAddCategory = (value: string) => {
     if (value.trim() === '' || categories.includes(value)) {
